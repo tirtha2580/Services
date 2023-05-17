@@ -1,0 +1,438 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <!--tailwind cdn link-->
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap 4-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+
+   
+</head>
+<body>
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-xl"><i class="fa-solid fa-notes-medical"></i>Hospitex</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href="{% url 'home' %}" class="mr-5 hover:text-green-500 cursor-pointer">Home</a>
+            <a href="{% url 'service' %}" class="mr-5 hover:text-green-500 cursor-pointer">Services</a>
+            <a href="{% url 'Ourteam' %}" class="mr-5 hover:text-green-500 cursor-pointer">Our Team</a>
+            <a href="{% url 'About' %}" class="mr-5 hover:text-green-500 cursor-pointer">About</a>
+            <a href="{% url 'contact' %}" class="mr-5 hover:text-green-500 cursor-pointer">Contact</a>
+          </nav>
+          <button class=" ml-5 inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-400 rounded text-base mt-4 md:mt-0">Call:1800-206-358 </button>
+          <button class=" ml-5 inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-400 rounded text-base mt-4 md:mt-0"><a href="#sign in">Login </button></a>
+         
+        </div>
+      </header>
+
+     <!--Services-->
+     <section  id="service_block" class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Services</h1>
+            <div class="h-1 w-20 bg-green-500 rounded"></div>
+          </div>
+          <p class="lg:w-1/2 w-full leading-relaxed text-green-600 font-bold">A hospital is a healthcare facility that provides specialized medical and nursing care as well as medical supplies to patients. </p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+          {% load static %}<img src="{% static "medical/media/heart.jpg" %}" alt="hero"/>
+    
+      
+              <!--<img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/heart.jpg" alt="content">-->
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Cardiology - Adult</h2>
+              <p class="leading-relaxed text-base">Heart diseases such as heart attack, congestive heart failure, congenital heart disease, and coronary heart disease are the leading cause of death for men and women in every part of the globe.</p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/neuro.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Neurology</h2>
+              <p class="leading-relaxed text-base">The department of neurosurgery at Hospitex in India is well equipped to treat all the neurological diseases including 
+                stroke
+                , headache, epilepsy, coma, neuropathies, multiple sclerosis, myopathies, Parkinson’s disease, Myasthenia Gravis and many more, establishing it as one of the best hospital for 
+                neurosurgery treatment in India
+                .</p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/gastro.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Orthopedics</h2>
+              <p class="leading-relaxed text-base">Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.</p>
+            </div>
+          </div>
+
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/vas.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Gastroenterology</h2>
+              <p class="leading-relaxed text-base"> We have ten dedicated cancer centres across India that offer cancer care. We have many surgical and radiation cancer specialists and diagnostic consultants who care for our patients.
+                We share courageous and inspiring stories of our patients, who have battled against cancer and stood victorious. Their stories inspire us to do more and help people conquer cancer. </p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/ortho.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Oncology</h2>
+              <p class="leading-relaxed text-base"> We share courageous and inspiring stories of our patients, who have battled against cancer and stood victorious. Their stories inspire us to do more and help people conquer cancer.</p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/spine.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Vascular Surgery</h2>
+              <p class="leading-relaxed text-base"> The Vascular System is also referred to as the Circulatory System or the Cardiovascular System. The Vascular System consists of arteries, veins and lymphatic vessels. As our heart beats, it pumps blood from the heart and circulates the blood throughout our body, thus delivering oxygen and nutrients to the body and maintaining a state of balance in the body.</p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/robotics.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Robotics</h2>
+              <p class="leading-relaxed text-base"> Surgery can be performed through smaller cuts than open surgery. The small, precise movements that are possible with this type of surgery give it huge advantages over standard surgical techniques. This can allow the surgeon to do a procedure through a small cut that could be done before only with open surgery.</p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              {% load static %}<img src="{% static "medical/media/oncology.jpg" %}" alt="hero"/>
+              <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"></h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Spine</h2>
+              <p class="leading-relaxed text-base">The Hospitex department of Spine is regarded as one of the top & best hospitals for spine surgery in India with a legacy of innovation and excellence.
+                The spine surgeons perform major and complex spine surgery. Hospitex Hospitals is indeed a pioneer and one of the foremost institutions for spine surgery. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Specialities & Medical services</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+              <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">ONCOLOGY</h2>
+              <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+               <a></a>
+               <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span > Ortho-Oncology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Gynaecology - Oncology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Uro - Oncology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Radiation Oncology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Haemato Oncology
+              </nav>
+            </div>
+            <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+              <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">TRANSPLANTS</h2>
+              <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Heart-Transplants
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Liver-Transplants
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Kidney-Transplants
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Lung-Transplants
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Intestine-Transplants
+                </a>
+              </nav>
+            </div>
+            <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+              <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">CRITICAL SERVICES</h2>
+              <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Neurology 
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Cardiology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Nephrology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Bone Marrow
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span> Gynaecology
+                </a>
+              </nav>
+            </div>
+            <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+              <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">OTHER SERVICES</h2>
+              <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Medical Labs
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Pathology
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Pharmacy
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Blood Bank
+                </a>
+                <a>
+                  <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Emergency
+                </a>
+              </nav>
+            </div>
+          </div>
+          <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Emergency</button>
+          <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Pharmacy</button>
+        </div>
+      </section>
+
+        <!--ortho oncology-->
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 text-center font-medium text-green-700"> Ortho - Oncology</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% load static %}<img src="{% static "medical/media/ortho onco 2.jpg" %}" alt="First slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/ortho2.jpg" %}" alt="Second slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/ortho onco 1.jpg" %}" alt="Third slide"/>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+       
+        <section class="text-gray-600 body-font">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Ortho - Oncology</h1>
+              <p class="mb-8 leading-relaxed">Our experienced and multidisciplinary Oncology team offers Comprehensive Treatment in the field of Complex Orthopaedic Cancers.</p>
+              <br>
+              <h1 class="text-2xl">What is Ortho - Oncology</h1>
+              <p>Oncology is a branch of medicine that specialises in the study, treatment, and management of cancer. It covers the entire scope of treatment from the diagnosis of cancer to all the different treatments of cancer and palliative care. A doctor who specialises in oncology is called an oncologist. Ortho oncology or orthopedic oncology is the speciality that deals with musculoskeletal cancers. This speciality deals with the diagnosis and treatment of bone cancers, soft tissue sarcomas, other cancers that have spread to the bones and conditions that occur due to another cancer or a side effect of treatment.
+
+                Since bone cancer treatment involves many different aspects of oncology, the Hospitex Health team takes a multi-disciplinary approach to ortho oncology. An orthopedic oncology team consists of dedicated Orthopaedic Cancer Surgeons, Nuclear Medicine Specialist, Musculoskeletal Radiologists, Interventional Radiologists, Pathologists, Medical Oncology Consultants and Radiation Oncology Consultants.
+                
+                Hospitex Health as a leading bone cancer hospital in India also performs limb salvage surgery in collaboration with plastic and reconstructive surgeons who specialise in musculoskeletal oncology.</p>
+                <br>
+              <div class="flex justify-center">
+                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Visit Best Orthopaedics</button>
+                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Online Consultant</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <hr>
+
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 text-center font-medium text-green-700">Gynaecology- Oncology</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% load static %}<img src="{% static "medical/media/gyno onco 1.jpg" %}" alt="First slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/gyno onco 2.jpg" %}" alt="Second slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/gyno onco 3.jpg" %}" alt="Third slide"/>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <section class="text-gray-600 body-font">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"> Gynaecology- Oncology</h1>
+              <p class="mb-8 leading-relaxed">Our Multidisciplinary team of Oncologists have extensive experience in treating all types of Cancers in Women across all age groups.
+              </p>
+              <br>
+              <h1 class="text-2xl">What is Gynaecology - Oncology</h1>
+              <p >Our team of experts is made up of gynaecological cancer surgeons, medical & radiation oncologists, clinical nurse specialists, radiologists, pathologists, and physiotherapists amongst others. Women are cared for by this multi-disciplinary team who will plan their management of care and rehabilitation with them every step. Palliative care, pain management and home-based care are also provided for terminal patients.</p>
+              <br>
+              <div class="flex justify-center">
+                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Visit Best Orthopaedics</button>
+                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Online Consultant</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <hr>
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 text-center font-medium text-green-700">Uro- Oncology</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% load static %}<img src="{% static "medical/media/inter.jpg" %}" alt="First slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/uro onco 1.jpg" %}" alt="Second slide"/>
+            </div>
+            <div class="carousel-item">
+              {% load static %}<img src="{% static "medical/media/uro onco2.jpg" %}" alt="Third slide"/>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <section class="text-gray-600 body-font">
+              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"> Uro- Oncology</h1>
+              <p class="mb-8 leading-relaxed"> Our experienced team of Uro Oncologists are among the finest in the country to have Revolutionized the Effective treatment of Localized Urological Cancers.
+              </p>
+              <br>
+              <h1 class="text-2xl">What is uro - Oncology</h1>
+              <p >A urological oncologist is a qualified and trained surgeon who provides urology cancer treatment. When a patient has urological cancer, then generally surgery is the first treatment suggested. This is particularly true during the early stages of cancer. As cancer progresses, surgery is used along with other techniques like chemotherapy, radiotherapy, and immunotherapy.</p>
+              <br>
+              <div class="flex justify-center">
+                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Visit Best Orthopaedics</button>
+                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Online Consultant</button>
+              </div>
+            </div>
+          </div>
+        </section>
+</body>
+</html>
